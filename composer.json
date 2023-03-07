@@ -1,0 +1,40 @@
+{
+  "name": "konigbach/changelog-manager",
+  "description": "Manages changelog avoiding git conflicts",
+  "require": {
+    "php": "^8.2",
+    "illuminate/contracts": "^9.0 || ^10.0",
+    "illuminate/support": "^9.0 || ^10.0",
+    "symfony/yaml": "^6.2"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.6",
+    "nunomaduro/collision": "^6.1",
+    "nunomaduro/larastan": "^2.0",
+    "orchestra/testbench": "^7.1",
+    "phpunit/phpunit": "^9.5.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Konigbach\\ChangelogManager\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Konigbach\\ChangelogManager\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Konigbach\\ChangelogManager\\ChangelogManagerServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

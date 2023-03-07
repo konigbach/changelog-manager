@@ -1,0 +1,2 @@
+{{ $changelogType }}:
+    - "#{{ $taskNumber }}: {{ $taskDescription }}"
