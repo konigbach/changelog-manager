@@ -26,6 +26,11 @@ class AddChangelogCommand extends Command
         }
 
         $view = view('changelog-manager::changelog-manager.changelog', compact('changelogType', 'taskNumber', 'taskDescription'));
+
+        if (!File::isDirectory(config('changelog-manager.directory'))) {
+            File::makeDirectory(config('changelog-manager.directory'));
+        }
+
         $path = config('changelog-manager.directory') . '/' . $taskNumber . '.yaml';
         File::put($path, $view->render());
 

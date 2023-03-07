@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'directory' => env('BITPANDA_CHANGELOG_GENERATOR_DIRECTORY', app_path('../changelog/')),
+    'directory' => env('CHANGELOG_GENERATOR_DIRECTORY', app_path('../changelog/')),
     'allowed_types' => [
         'added',
         'changed',
